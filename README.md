@@ -112,8 +112,8 @@ Results:
 ### list
 Retrieve a list of applications from one of the collections at Google Play. Options:
 
-* `collection` (optional, defaults to `collection.TOP_FREE`): the Google Play collection that will be retrieved. Available options can bee found [here](https://github.com/facundoolano/google-play-scraper/blob/dev/lib/constants.js#L58).
-* `category` (optional, defaults to no category): the app category to filter by. Available options can bee found [here](https://github.com/facundoolano/google-play-scraper/blob/dev/lib/constants.js#L3).
+* `collection` (optional, defaults to `collection.TOP_FREE`): the Google Play collection that will be retrieved. Available options can bee found [here](https://github.com/facundoolano/google-play-scraper/blob/b7669f78766b8306896447ddbe8797fe36eae49f/lib/constants.js#L67).
+* `category` (optional, defaults to no category): the app category to filter by. Available options can bee found [here](https://github.com/facundoolano/google-play-scraper/blob/b7669f78766b8306896447ddbe8797fe36eae49f/lib/constants.js#L10).
 * `age` (optional, defaults to no age filter): the age range to filter the apps (only for FAMILY and its subcategories). Available options are `age.FIVE_UNDER`, `age.SIX_EIGHT`, `age.NINE_UP`.
 * `num` (optional, defaults to 500): the amount of apps to retrieve.
 * `lang` (optional, defaults to `'en'`): the two letter language code used to retrieve the applications.
@@ -304,7 +304,7 @@ var gplay = require('google-play-scraper');
 // This example will return 3000 reviews
 // on a single call
 gplay.reviews({
-  appId: 'com.mojang.minecraftpe',
+  appId: 'com.dxco.pandavszombies',
   sort: gplay.sort.RATING,
   num: 3000
 }).then(console.log, console.log);
@@ -313,7 +313,7 @@ gplay.reviews({
 // just send an empty nexPaginationToken
 // you will receive a nextPaginationToken parameter in your response
 gplay.reviews({
-  appId: 'com.mojang.minecraftpe',
+  appId: 'com.dxco.pandavszombies',
   sort: gplay.sort.RATING,
   paginate: true,
   nextPaginationToken: null // you can omit this parameter
@@ -323,7 +323,7 @@ gplay.reviews({
 // for the next page (next page is the token return by the previous call)
 // you will receive a nextPaginationToken parameter in your response
 gplay.reviews({
-  appId: 'com.mojang.minecraftpe',
+  appId: 'com.dxco.pandavszombies',
   sort: gplay.sort.RATING,
   paginate: true,
   nextPaginationToken: 'TOKEN_FROM_THE_PREVIOUS_REQUEST' // you can omit this parameter
